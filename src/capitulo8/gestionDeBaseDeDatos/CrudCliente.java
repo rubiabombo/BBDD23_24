@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 import Utils.UtilsBBDD;
 
-public class ControladorCliente {
+public class CrudCliente {
 	
 	private static String TABLA = "cliente";
 	
@@ -100,7 +100,7 @@ public class ControladorCliente {
 	    try {
 	    	date = sdf.parse(fecha);
 	    } catch (ParseException e) {
-    	// TODO Auto-generated catch block
+
 	    	e.printStackTrace();
 	    }
 	    

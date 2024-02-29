@@ -9,7 +9,7 @@ import Utils.UtilsBBDD;
 
 
 
-public class ControladorFabricante {
+public class CrudFabricante {
 	
 	private static String TABLA = "fabricante";
 
@@ -69,7 +69,7 @@ public class ControladorFabricante {
 			System.out.println("\n\nFilas Afectadas: " + rows + "\n\n");
 			ps.close();
 		}
-		else JOptionPane.showMessageDialog(null, "El id dado no se encuentra registrado en la base de datos");
+		else JOptionPane.showMessageDialog(null, "El id proporcionado no se encuentra registrado en la base de datos :(");
 		
 	}
 

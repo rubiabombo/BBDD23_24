@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 import Utils.UtilsBBDD;
 
-public class ControladorCoche {
+public class CrudCoche {
 
 	private static String TABLA = "coche";
 

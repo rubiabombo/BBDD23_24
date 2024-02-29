@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 import Utils.UtilsBBDD;
 
-public class ControladorVenta {
+public class CrudVenta {
 
 	private static String TABLA = "venta";
 

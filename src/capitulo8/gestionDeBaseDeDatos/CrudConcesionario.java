@@ -9,7 +9,7 @@ import Utils.UtilsBBDD;
 
 
 
-public class ControladorConcesionario {
+public class CrudConcesionario {
 	
 	private static String TABLA = "concesionario";
 

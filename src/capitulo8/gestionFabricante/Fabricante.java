@@ -10,8 +10,10 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+import capitulo8.pruebas.BDLeerFichero;
+
 public class Fabricante {
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		
 		try {
 			
@@ -20,7 +22,7 @@ public static void main(String[] args) {
 				switch (menu()) {
 					case 0: {
 						conn.close();
-						System.out.println("\n\n Adiós");
+						System.out.println("\n\n Hasta luego  ;-)");
 						System.exit(0);
 						break;
 					}
@@ -185,9 +187,9 @@ public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Tabla fabricante");
+		System.out.println("Administracion de la tabla fabricante");
 		System.out.println("------------------------------------- \n");
-		System.out.println("1. Mostrar  todos los datos de la tabla");
+		System.out.println("1. Mostrar datos de la tabla");
 		System.out.println("2. Añadir un dato a la tabla");
 		System.out.println("3. Modificar un dato de la tabla");
 		System.out.println("4. Eliminar un registro de la tabla");
@@ -206,17 +208,18 @@ public static void main(String[] args) {
 	 */
 	public static Connection obtenerConeccion() throws ClassNotFoundException, SQLException {
 		
-		String driver = LeerFichero.getProperty("JDBC_DRIVER_CLASS");
-		String user = LeerFichero.getProperty("JDBC_USER");
-		String password = LeerFichero.getProperty("JDBC_PASSWORD");
-		String host = LeerFichero.getProperty("JDBC_HOST");
-		String schema = LeerFichero.getProperty("JDBC_SCHEMA_NAME");
-		String properties = LeerFichero.getProperty("JDBC_PROPERTIES");
+		String driver = BDLeerFichero.getProperty("JDBC_DRIVER_CLASS");
+		String user = BDLeerFichero.getProperty("JDBC_USER");
+		String password = BDLeerFichero.getProperty("JDBC_PASSWORD");
+		String host = BDLeerFichero.getProperty("JDBC_HOST");
+		String schema = BDLeerFichero.getProperty("JDBC_SCHEMA_NAME");
+		String properties = BDLeerFichero.getProperty("JDBC_PROPERTIES");
 		
 		
 		Class.forName(driver);
 	    Connection conn = (Connection) DriverManager.getConnection ("jdbc:mysql://" + host + "/" + schema + properties, user, password);
 		
 	    return conn;
+	
 	}
 }

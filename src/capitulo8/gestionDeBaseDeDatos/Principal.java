@@ -16,29 +16,29 @@ try {
 				switch (menu()) {
 					case 0: {
 						conn.close();
-						System.out.println("\n\n Hasta luego  ;-)");
+						System.out.println("\n\n Adiós, vuelva pronto :)");
 						System.exit(0);
 						break;
 					}
 				
 					case 1: {
-						ControladorFabricante.main(conn);
+						CrudFabricante.main(conn);
 						break;
 					}
 					case 2: {
-						ControladorConcesionario.main(conn);
+						CrudConcesionario.main(conn);
 						break;
 					}
 					case 3: {
-						ControladorCliente.main(conn);
+						CrudCliente.main(conn);
 						break;
 					}
 					case 4: {
-						ControladorCoche.main(conn);
+						CrudCoche.main(conn);
 						break;
 					}
 					case 5: {
-						ControladorVenta.main(conn);
+						CrudVenta.main(conn);
 						break;
 					}
 				
