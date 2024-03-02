@@ -17,6 +17,7 @@ import javax.swing.border.EmptyBorder;
 
 import evaluacionCentroEducativo.controller.ControladorProfesor;
 import evaluacionCentroEducativo.model.Profesor;
+import javax.swing.JComboBox;
 
 public class PanelProfesor extends JPanel {
 
@@ -26,9 +27,9 @@ public class PanelProfesor extends JPanel {
 	private JTextField jtfA1;
 	private JTextField jtfA2;
 	private JTextField jtfDni;
-	private JTextField jtfDir;
 	private JTextField jtfEmail;
 	private JTextField jtfTelf;
+	private JTextField jtfDir;
 
 	/**
 	 * Launch the application.
@@ -43,7 +44,7 @@ public class PanelProfesor extends JPanel {
 		this.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		GridBagLayout gbl_contentPane = new GridBagLayout();
-		gbl_contentPane.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0 };
+		gbl_contentPane.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0 };
 		gbl_contentPane.columnWeights = new double[] { 0.0, 1.0 };
 //		gbl_contentPane.columnWidths = new int[]{0};
 //		gbl_contentPane.rowHeights = new int[]{0};
@@ -195,13 +196,29 @@ public class PanelProfesor extends JPanel {
 		gbc_jtfTelf.gridy = 8;
 		add(jtfTelf, gbc_jtfTelf);
 		jtfTelf.setColumns(10);
+		
+		JLabel lblNewLabel_9 = new JLabel("Sexo");
+		GridBagConstraints gbc_lblNewLabel_9 = new GridBagConstraints();
+		gbc_lblNewLabel_9.anchor = GridBagConstraints.EAST;
+		gbc_lblNewLabel_9.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel_9.gridx = 0;
+		gbc_lblNewLabel_9.gridy = 9;
+		add(lblNewLabel_9, gbc_lblNewLabel_9);
+		
+		JComboBox jcbSexo = new JComboBox();
+		GridBagConstraints gbc_jcbSexo = new GridBagConstraints();
+		gbc_jcbSexo.insets = new Insets(0, 0, 5, 5);
+		gbc_jcbSexo.fill = GridBagConstraints.HORIZONTAL;
+		gbc_jcbSexo.gridx = 1;
+		gbc_jcbSexo.gridy = 9;
+		add(jcbSexo, gbc_jcbSexo);
 
 		JPanel panel = new JPanel();
 		GridBagConstraints gbc_panel = new GridBagConstraints();
 		gbc_panel.gridwidth = 3;
 		gbc_panel.fill = GridBagConstraints.BOTH;
 		gbc_panel.gridx = 0;
-		gbc_panel.gridy = 9;
+		gbc_panel.gridy = 10;
 		this.add(panel, gbc_panel);
 
 		JButton btnNewButton = new JButton("<<");

@@ -12,11 +12,12 @@ import evaluacionCentroEducativo.model.TipologiaSexo;
 import evaluacionCentroEducativo.controller.ConnectionManager;
 
 public class ControladorSexo {
+
 	public static List<TipologiaSexo> allRegisters() throws SQLException {
 
 		Connection conn = ConnectionManager.getConexion();
 		Statement s = (Statement) conn.createStatement();
-		ResultSet rs = s.executeQuery("select * from centroeducativo.tipologiasexo");
+		ResultSet rs = s.executeQuery("select * from centroeducativo.TipologiaSexo");
 
 		List<TipologiaSexo> sexo = new ArrayList<TipologiaSexo>();
 

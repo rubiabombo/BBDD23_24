@@ -19,6 +19,7 @@ import evaluacionCentroEducativo.controller.ControladorEstudiante;
 import evaluacionCentroEducativo.model.Estudiante;
 
 public class PanelEstudiante extends JPanel {
+
 	private JPanel contentPane;
 	private JTextField jtfId;
 	private JTextField jtfNombre;

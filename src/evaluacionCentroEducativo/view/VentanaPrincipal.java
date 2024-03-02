@@ -19,6 +19,7 @@ import javax.swing.border.EmptyBorder;
 
 
 import evaluacionCentroEducativo.utils.Apariencia;
+import javax.swing.JLabel;
 
 public class VentanaPrincipal extends JFrame {
 	static {
@@ -38,11 +39,23 @@ public class VentanaPrincipal extends JFrame {
 		
 		tabedPane.add("Cursos", new PanelCurso());
 		
-		tabedPane.add("Profesor", new PanelProfesor());
-		
 		tabedPane.add("Estudiante", new PanelEstudiante());
 		
 		tabedPane.add("Materias", new PanelMateria());
+		
+		PanelProfesor panelProfesor = new PanelProfesor();
+		GridBagLayout gridBagLayout = (GridBagLayout) panelProfesor.getLayout();
+		gridBagLayout.columnWeights = new double[]{0.0, 1.0};
+		tabedPane.add("Profesor", panelProfesor);
+		
+		
+		JComboBox comboBox = new JComboBox();
+		GridBagConstraints gbc_comboBox = new GridBagConstraints();
+		gbc_comboBox.insets = new Insets(0, 0, 5, 5);
+		gbc_comboBox.fill = GridBagConstraints.HORIZONTAL;
+		gbc_comboBox.gridx = 1;
+		gbc_comboBox.gridy = 6;
+		panelProfesor.add(comboBox, gbc_comboBox);
 		
 		tabedPane.add("Valoración", new PanelValoracion());
 		

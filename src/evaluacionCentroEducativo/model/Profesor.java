@@ -2,7 +2,6 @@ package evaluacionCentroEducativo.model;
 
 public class Profesor {
 
-
 	int id;
 	String nombre;
 	String apellido1;
@@ -130,4 +129,3 @@ public class Profesor {
 	}
 
 }
-
