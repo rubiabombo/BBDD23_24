@@ -1,4 +1,5 @@
-package capitulo9.gestionCentroEducativo.views;
+package gestionCentroEducativo.view;
+
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,6 +15,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.KeyStroke;
 
 import gestionCentroEducativo.utils.CacheImagenes;
+
 
 public class Menu extends JMenuBar {
 
